@@ -3,7 +3,7 @@
  */
 
 function hello() {
-  var p=document.getElementById("output1")
+  let p=document.getElementById("output1")
     p.innerHTML="Hello, AP Computer Science Principles!";
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
@@ -16,7 +16,7 @@ function hello() {
 
 function helloAgain() {
 
-  //////////// DO NOT MODIFY      Use the @name variable to store
+  //////////// DO NOT MODIFY      Use the @name letiable to store
   let name; // DO NOT MODIFY      the value that the user enters
   //////////// DO NOT MODIFY      in response to your prompt.
 
@@ -41,7 +41,7 @@ function celsius() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-var fahrenheit = (cels * 9 / 5 + 32).toFixed(2)
+let fahrenheit = (cels * 9 / 5 + 32).toFixed(2);
 document.getElementById("output3").innerHTML=cels + " degrees Celsius equals " + fahrenheit + " degrees Fahrenheit.";
 
 
@@ -64,7 +64,7 @@ function fahrenheit() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  var celsius = (fahr - 32)*( 9 / 5).toFixed(2)
+  let celsius = ((fahr - 32)*(5 / 9)).toFixed(2);
   document.getElementById("output4").innerHTML=fahr + " degrees Fahrenheit equals " + celsius + " degrees Celsius.";
 
 
@@ -89,8 +89,11 @@ function inches() {
   ////////////////////// DO NOT MODIFY
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
-
-  // WRITE YOUR EXERCISE 5 CODE HERE
+let mile=(Math.floor(inches/63360));
+let yard=(Math.floor((inches - (mile*63360))/36));
+let feet=(Math.floor((inches - (mile*63360)-(yard*36))/12));
+inches=(Math.floor(inches - (mile*63360)-(yard*36)-(feet*12)));
+document.getElementById("output5").innerHTML= "Miles: "+mile + "<br/>Yards: "+yard + "<br/>Feet: "+feet + "<br/>Inches: "+inches
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
